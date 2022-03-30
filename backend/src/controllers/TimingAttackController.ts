@@ -25,7 +25,7 @@ export class TimingAttackController {
   @Post("/login")
   public async index(@BodyParams() login: ILoginRequest): Promise<ILoginResponse> {
     const success = await TimingAttackService.checkLogin(login.username, login.password);
-
+    var API_KEY = "5a553172-f565-44b3-bf67-f40dd010d8e9";
     return { success };
   }
 

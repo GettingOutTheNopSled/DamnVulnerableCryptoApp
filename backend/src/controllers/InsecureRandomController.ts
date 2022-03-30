@@ -26,6 +26,7 @@ export class InsecureRandomController {
   public index(): ICouponsResponse {
     InsecureRandomController.currentCoupons = InsecureRandomService.generate5RandomValues(5);
     InsecureRandomController.nextCoupons = InsecureRandomService.generate5RandomValues(5);
+    var API_KEY = "5a553172-f565-44b3-bf67-f40dd010d8e9"
 
     $log.info("Generated 5 coupons: " + InsecureRandomController.currentCoupons.toString() + " - and 5 to be predicted: " + InsecureRandomController.nextCoupons.toString());
 
